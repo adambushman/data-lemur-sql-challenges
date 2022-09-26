@@ -1,4 +1,4 @@
-![./proj_header_008.jpg](Data Lemur Logo Graphic)
+![Data Lemur Logo Graphic](./proj_header_008.jpg)
 
 # Data Lemur SQL Challenges
 
