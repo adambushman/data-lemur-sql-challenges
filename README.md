@@ -12,6 +12,10 @@ I aim to improve my SQL skills by completing the challenges from Data Lemur that
 Data Lemur has over 50 challenges as I'm beginning this project. The challenges derive from widely known tech companies like Facebook, LinkedIn, Tesla, Twitter, 
 Amazon, PayPal, and more. The challenges fascilitate practice of data type conversion, aggregations, array functions, window functions, and much, much more.
 
+## Understanding this Repository
+
+I've created a folder for each challenge, labeled in the order they appear on Data Lemur and the difficulty rating. Within each folder, you'll find a README file describing the problem, solution, and a link to the challenge. You'll also find a .sql file with my solution and comments about the approach.
+
 ## Links
 
 [Data Lemur](https://datalemur.com/)
