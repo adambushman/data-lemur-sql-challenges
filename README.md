@@ -1,3 +1,5 @@
+![./proj_header_008.jpg](Data Lemur Logo Graphic)
+
 # Data Lemur SQL Challenges
 
 Completed SQL challenges from Data Lemur, an interactive SQL resource by Nick Singh
