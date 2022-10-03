@@ -1,15 +1,17 @@
-# Unfinished Parts
+# Laptop vs Mobile Viewership
 
-Data Lemur SQL challenge to find parts that have begun assembly but are unfinished.
+Data Lemur SQL challenge to compare viewership on device (Laptop vs Mobile).
 
 ## Problem
 
-Tesla is investigating bottlenecks in their production, and they need your help to extract the relevant data. Write a SQL query that determines which parts have begun the assembly process but are not yet finished.
+Assume that you are given the table below containing information on viewership by device type (where the three types are laptop, tablet, and phone). Define “mobile” as the sum of tablet and phone viewership numbers. Write a query to compare the viewership on laptops versus mobile devices.
+
+Output the total viewership for laptop and mobile devices in the format of "laptop_views" and "mobile_views".
 
 ## Solution
 
-I approached the problem with a simple filter for NULL or empty entries in the finish date. This means that the corresponding part had an incomplete step. All that was left is to select unique/distinct part names.
+I approached the solution with a CTE to define the logic of what constitutes "mobile" vs "laptop". Then I implemented to subqueries in the select statement to get the right totals. I did not like the solution at all. Felt very clunky. I experimented with some other approaches but they felt just as messy.
 
-The official solution uses the same approach except for grouping instead of selecting distinct.
+The official solution was really slick. With the use of a case statement yielding integers, we can sum for two columns without needing CTEs or Subqueries. Definitely opened my eyes a little here.
 
-[Full Challenge Description](https://datalemur.com/questions/tesla-unfinished-parts)
+[Full Challenge Description](https://datalemur.com/questions/laptop-mobile-viewership)

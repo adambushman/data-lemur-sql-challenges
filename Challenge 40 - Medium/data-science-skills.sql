@@ -1,5 +1,5 @@
 /*
-*** Challenge 01 - Easy
+*** Challenge 40 - Easy
 *** Data Science Skills - LinkedIn
 *** Official Submission - Adam Bushman
 */

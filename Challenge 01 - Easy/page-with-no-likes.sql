@@ -1,5 +1,5 @@
 /*
-*** Challenge 02 - Easy
+*** Challenge 01 - Easy
 *** Page With No Likes - Facebook
 *** Official Submission - Adam Bushman
 */
