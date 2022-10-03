@@ -1,17 +1,17 @@
-# Compensation Outliers
+# Y-on-Y Growth Rate
 
-Data Lemur SQL challenge to find employee compensation outliers for future analysis.
+Data Lemur SQL challenge to calculate the year-on-year growth rate for total spend by product.
 
 ## Problem
 
-An employee is considered to be potentially overpaid if they earn more than 2 times the average salary for people with the same title. Similarly, an employee might be underpaid if they earn less than half of the average for their title. We'll refer to employees who are both underpaid and overpaid as compensation outliers for the purposes of this problem.
+Assume you are given the table below containing information on user transactions for particular products. Write a query to obtain the year-on-year growth rate for the total spend of each product for each year.
 
-Write a query that shows the following data for each compensation outlier: employee ID, salary, and whether they are potentially overpaid or potentially underpaid.
+Output the year (in ascending order) partitioned by product id, current year's spend, previous year's spend and year-on-year growth rate (percentage rounded to 2 decimal places).
 
 ## Solution
 
-I decided to approach the problem with a subquery to handle the averages by employee group, then a subquery to implement the logic for outliers, and finally an outer query to present the relevant, truncated data. I actually really like the solution and felt it was nice and concise.
+Using a CTE (where we can reference it multiple times in the same instance) was a really nice solution here. I could reference once for the current year and join for a second reference for the previous year. The one wrinkle was to consider that the previous year reference required adjust the year field forward by one while preserving the product_id field.
 
-The official solution implemented it similarly with a CTE but used a window function to reduce some of the complexity.
+The official solution used what I think is a window function (LAG) to create a new column for the previous year. This is nice approach as well that eliminates the wrinkle of joining fields to preserve the year, product_id relationship. 
 
-[Full Challenge Description](https://datalemur.com/questions/compensation-outliers)
+[Full Challenge Description](https://datalemur.com/questions/yoy-growth-rate)
