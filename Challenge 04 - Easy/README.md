@@ -1,4 +1,4 @@
-# Unfinished Parts
+# Laptop vs Mobile Viewership
 
 Data Lemur SQL challenge to compare viewership on device (Laptop vs Mobile).
 
