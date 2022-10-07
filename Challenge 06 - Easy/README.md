@@ -1,6 +1,6 @@
 # Final Account Balance
 
-Data Lemur SQL challenge to find the number of companies who've posted duplicate job listings.
+Data Lemur SQL challenge to calculate the ending balance by account.
 
 ## Problem
 
