@@ -1,5 +1,5 @@
 /*
-*** Challenge 08 - Easy
+*** Challenge 09 - Easy
 *** LinkedIn Power Creators Part 1 - LinkedIn
 *** Official Submission - Adam Bushman
 */
