@@ -1,5 +1,5 @@
 /*
-*** Challenge 04 - Easy
+*** Challenge 05 - Easy
 *** Cities With Completed Trades - Robinhood
 *** Official Submission - Adam Bushman
 */

@@ -1,5 +1,5 @@
 /*
-*** Challenge 03 - Easy
+*** Challenge 04 - Easy
 *** Laptop vs Mobile Viewership - New York Times
 *** Official Submission - Adam Bushman
 */

@@ -1,5 +1,5 @@
 /*
-*** Challenge 07 - Easy
+*** Challenge 08 - Easy
 *** Histogram of Tweets - Twitter
 *** Official Submission - Adam Bushman
 */

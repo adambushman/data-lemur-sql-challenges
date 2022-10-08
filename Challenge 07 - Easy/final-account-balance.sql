@@ -1,5 +1,5 @@
 /*
-*** Challenge 06 - Easy
+*** Challenge 07 - Easy
 *** Final Account Balance - PayPal
 *** Official Submission - Adam Bushman
 */

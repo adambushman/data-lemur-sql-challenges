@@ -1,17 +1,17 @@
-# Cities With Completed Trades
+# Laptop vs Mobile Viewership
 
-Data Lemur SQL challenge to find the top cities in completed trade orders.
+Data Lemur SQL challenge to compare viewership on device (Laptop vs Mobile).
 
 ## Problem
 
-You are given the tables below containing information on Robinhood trades and users. Write a query to list the top three cities that have the most completed trade orders in descending order.
+Assume that you are given the table below containing information on viewership by device type (where the three types are laptop, tablet, and phone). Define “mobile” as the sum of tablet and phone viewership numbers. Write a query to compare the viewership on laptops versus mobile devices.
 
-Output the city and number of orders.
+Output the total viewership for laptop and mobile devices in the format of "laptop_views" and "mobile_views".
 
 ## Solution
 
-My solution was very straight forward. A left join between the trades and users table, and filtering for only completed orders. The big key here was that we count the number of individual orders (via the id) and not worrying about the details of the trade(price, quantity, etc). It was therefore a simple count aggregator function, grouped by the city, ordered from largest to smallest, and limited to 3 records.
+I approached the solution with a CTE to define the logic of what constitutes "mobile" vs "laptop". Then I implemented to subqueries in the select statement to get the right totals. I did not like the solution at all. Felt very clunky. I experimented with some other approaches but they felt just as messy.
 
-The official solution approaches very similarly but used an inner join. Nothing wrong there, I often like to be explicit about which table has unique records and which don't.
+The official solution was really slick. With the use of a case statement yielding integers, we can sum for two columns without needing CTEs or Subqueries. Definitely opened my eyes a little here.
 
-[Full Challenge Description](https://datalemur.com/questions/completed-trades)
+[Full Challenge Description](https://datalemur.com/questions/laptop-mobile-viewership)

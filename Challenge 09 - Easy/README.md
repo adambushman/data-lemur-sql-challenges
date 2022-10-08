@@ -1,17 +1,17 @@
-# Histogram of Tweets
+# Average Review Ratings
 
-Data Lemur SQL challenge to discover "power creators" amongst LinkedIn users.
+Data Lemur SQL challenge to calculate the average star rating for each product per month.
 
 ## Problem
 
-The LinkedIn Creator team is looking for power creators who use their personal profile as a company or influencer page. If someone's LinkedIn page has more followers than the company they work for, we can safely assume that person is a power creator.
+Given the reviews table, write a query to get the average stars for each product every month.
 
-Write a query to return the IDs of these LinkedIn power creators ordered by the IDs.
+The output should include the month in numerical value, product id, and average star rating rounded to two decimal places. Sort the output based on month followed by the product id.
 
 ## Solution
 
-This challenge was pretty straight forward: a select statement joining the two tables on the common field, filtering for more profile followers than that of their respective company and ordering.
+My solution featured the "extract" function which, when applied to a date/time, allows you to pull a singular value. In our case, we chose the month. This function also had to go in the "group by" and "order by" clauses.
 
-The official solution was no less simple.
+The official solution approached the problem in the exact same manner.
 
-[Full Challenge Description](https://datalemur.com/questions/linkedin-power-creators)
+[Full Challenge Description](https://datalemur.com/questions/sql-avg-review-ratings)

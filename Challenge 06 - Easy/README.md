@@ -1,17 +1,15 @@
-# Final Account Balance
+# Duplicate Job Listings
 
-Data Lemur SQL challenge to calculate the ending balance by account.
+Data Lemur SQL challenge to find the number of companies who've posted duplicate job listings.
 
 ## Problem
 
-Given a table of bank deposits and withdrawals, return the final balance for each account.
+Assume you are given the table below that shows job postings for all companies on the LinkedIn platform. Write a query to get the number of companies that have posted duplicate job listings (two jobs at the same company with the same title and description).
 
 ## Solution
 
-My first inclination to solve this challenge was just an aggregate sum. But then I asked myself if it would be important to preserve the order of time (i.e. this transaction, then that one, then the following). Ultimately, no it didn't matter but I decided to follow that train of thought. 
+Using a simple group by statement on the company, title, and description fields, we can count the number of unique job postings. For those greater than one, we need only implement a having clause and select unique companies. I threw all that in a subquery or CTE and a full aggregate count function with an alias returns the final solution. 
 
-I executed a CTE with window functions for a cumulative sum and a rank, as well as a case statement ensured that "withdrawals" were negative while "deposits" were positive. . I then used a joined subquery which filtered for the final transactions of each account and then returned the right data.
+Such was the exact approach used for the official solution.
 
-The official solution disregarded order of transactions and used an aggregate sum with the previously explained case statement.
-
-[Full Challenge Description](https://datalemur.com/questions/final-account-balance)
+[Full Challenge Description](https://datalemur.com/questions/duplicate-job-listings)

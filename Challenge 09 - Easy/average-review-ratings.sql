@@ -1,5 +1,5 @@
 /*
-*** Challenge 08 - Easy
+*** Challenge 09 - Easy
 *** Average Review Ratings - Amazon
 *** Official Submission - Adam Bushman
 */

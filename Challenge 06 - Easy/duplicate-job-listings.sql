@@ -1,5 +1,5 @@
 /*
-*** Challenge 05 - Easy
+*** Challenge 06 - Easy
 *** Duplicae Job Listings - LinkedIn
 *** Official Submission - Adam Bushman
 */

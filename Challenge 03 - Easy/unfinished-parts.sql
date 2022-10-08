@@ -1,5 +1,5 @@
 /*
-*** Challenge 02 - Easy
+*** Challenge 03 - Easy
 *** Unfinished Parts - Tesla
 *** Official Submission - Adam Bushman
 */

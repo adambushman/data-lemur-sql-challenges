@@ -1,15 +1,17 @@
-# Duplicate Job Listings
+# Cities With Completed Trades
 
-Data Lemur SQL challenge to find the number of companies who've posted duplicate job listings.
+Data Lemur SQL challenge to find the top cities in completed trade orders.
 
 ## Problem
 
-Assume you are given the table below that shows job postings for all companies on the LinkedIn platform. Write a query to get the number of companies that have posted duplicate job listings (two jobs at the same company with the same title and description).
+You are given the tables below containing information on Robinhood trades and users. Write a query to list the top three cities that have the most completed trade orders in descending order.
+
+Output the city and number of orders.
 
 ## Solution
 
-Using a simple group by statement on the company, title, and description fields, we can count the number of unique job postings. For those greater than one, we need only implement a having clause and select unique companies. I threw all that in a subquery or CTE and a full aggregate count function with an alias returns the final solution. 
+My solution was very straight forward. A left join between the trades and users table, and filtering for only completed orders. The big key here was that we count the number of individual orders (via the id) and not worrying about the details of the trade(price, quantity, etc). It was therefore a simple count aggregator function, grouped by the city, ordered from largest to smallest, and limited to 3 records.
 
-Such was the exact approach used for the official solution.
+The official solution approaches very similarly but used an inner join. Nothing wrong there, I often like to be explicit about which table has unique records and which don't.
 
-[Full Challenge Description](https://datalemur.com/questions/duplicate-job-listings)
+[Full Challenge Description](https://datalemur.com/questions/completed-trades)

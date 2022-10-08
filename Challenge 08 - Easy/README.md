@@ -1,17 +1,15 @@
-# Average Review Ratings
+# Histogram of Tweets
 
-Data Lemur SQL challenge to calculate the average star rating for each product per month.
+Data Lemur SQL challenge to determine values one might use for a histogram.
 
 ## Problem
 
-Given the reviews table, write a query to get the average stars for each product every month.
-
-The output should include the month in numerical value, product id, and average star rating rounded to two decimal places. Sort the output based on month followed by the product id.
+Assume you are given the table below containing tweet data. Write a query to obtain a histogram of tweets posted per user in 2022. Output the tweet count per user as the bucket, and then the number of Twitter users who fall into that bucket.
 
 ## Solution
 
-My solution featured the "extract" function which, when applied to a date/time, allows you to pull a singular value. In our case, we chose the month. This function also had to go in the "group by" and "order by" clauses.
+I approached the solution with a CTE that filtered the tweets for the right year, grouped and counted by the user. From that CTE, I was able to do a join with subqueries. The join allowed for users to be placed in a bucket and counted grouped by the bucket.
 
-The official solution approached the problem in the exact same manner.
+The official solution approached the problem similarly but with more subqueries.
 
-[Full Challenge Description](https://datalemur.com/questions/sql-avg-review-ratings)
+[Full Challenge Description](https://datalemur.com/questions/sql-histogram-tweets)

@@ -1,15 +1,17 @@
-# Histogram of Tweets
+# Final Account Balance
 
-Data Lemur SQL challenge to determine values one might use for a histogram.
+Data Lemur SQL challenge to calculate the ending balance by account.
 
 ## Problem
 
-Assume you are given the table below containing tweet data. Write a query to obtain a histogram of tweets posted per user in 2022. Output the tweet count per user as the bucket, and then the number of Twitter users who fall into that bucket.
+Given a table of bank deposits and withdrawals, return the final balance for each account.
 
 ## Solution
 
-I approached the solution with a CTE that filtered the tweets for the right year, grouped and counted by the user. From that CTE, I was able to do a join with subqueries. The join allowed for users to be placed in a bucket and counted grouped by the bucket.
+My first inclination to solve this challenge was just an aggregate sum. But then I asked myself if it would be important to preserve the order of time (i.e. this transaction, then that one, then the following). Ultimately, no it didn't matter but I decided to follow that train of thought. 
 
-The official solution approached the problem similarly but with more subqueries.
+I executed a CTE with window functions for a cumulative sum and a rank, as well as a case statement ensured that "withdrawals" were negative while "deposits" were positive. . I then used a joined subquery which filtered for the final transactions of each account and then returned the right data.
 
-[Full Challenge Description](https://datalemur.com/questions/sql-histogram-tweets)
+The official solution disregarded order of transactions and used an aggregate sum with the previously explained case statement.
+
+[Full Challenge Description](https://datalemur.com/questions/final-account-balance)

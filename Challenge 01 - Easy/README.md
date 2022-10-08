@@ -1,17 +1,19 @@
-# Page With No Likes
+# Data Science Skills
 
-Data Lemur SQL challenge to find Facebook pages without any likes.
+Data Lemur SQL challenge to filter job candidates who possess all the required skills.
 
 ## Problem
 
-Assume you are given the tables below about Facebook pages and page likes. Write a query to return the page IDs of all the Facebook pages that don't have any likes. The output should be in ascending order.
+Given a table of candidates and their skills, you're tasked with finding the candidates best suited for an open Data Science job. You want to find candidates who are proficient in Python, Tableau, and PostgreSQL.
+
+Write a SQL query to list the candidates who possess all of the required skills for the job. Sort the the output by candidate ID in ascending order.
 
 ## Solution
 
-I approached the problem using a left join and a "having" clause to make sure the count was 0. This solution was correct and very interpretable but a touch long.
+At first glance, I thought I might approach the problem with a single "where" clause featuring an "in" operator listing the required skills. However, I was worried this wouldn't ensure that every candidate possessed all the skills.
 
-I decided to try another approach with a subquery in the "where" clause to make sure there's no page likes. This made the query very succinct but could be less interpretable in the onset. A third approach I experimented with was another left join but using a single "where" clause to filter for page likes as NULL. This was probably my favorite version of simplicity and interpretability.
+I decided to use 3 subqueries that would filter for candidates who possessed each of the skills. Together with AND logic, I achieved the correct solution. I brainstormed other approaches but none seemed worthwhile.
 
-Upon reviewing the official solution, they used the second and third approaches I came up with. All solutions appear very appropriate and could be a matter of taste.
+Upon reviewing the official solution, my suspicion was correct. They solved the issue using a "having" clause to ensure a candidate had a count of skills matching 3. This is a strong solution.
 
-[Full Challenge Description](https://datalemur.com/questions/sql-page-with-no-likes)
+[Full Challenge Description](https://datalemur.com/questions/matching-skills)
