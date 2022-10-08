@@ -1,4 +1,4 @@
-# Histogram of Tweets
+# LinkedIn Power Creators Part 1
 
 Data Lemur SQL challenge to discover "power creators" amongst LinkedIn users.
 
