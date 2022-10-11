@@ -1,15 +1,17 @@
-# First Transaction
+# Odd and Even Measurements
 
-Data Lemur SQL challenge to identify the users whose first transaction was for $50 or more.
+Data Lemur SQL challenge to sum odd and even numbers in separate columns.
 
 ## Problem
 
-Assume you are given the table below on user transactions. Write a query to obtain the list of customers whose first transaction was valued at $50 or more. Output the number of users.
+Assume you are given the table below containing measurement values obtained from a sensor over several days. Measurements are taken several times within a given day.
+
+Write a query to obtain the sum of the odd-numbered and even-numbered measurements on a particular day, in two different columns.
 
 ## Solution
 
-I executed a window function to rank the transactions by user ordering by the date. Because some orders were processed on the same day, I thought about also throwing the amount into the ordering. My thought there was that, given we don't know which was the first, we could make an explicit assumption to use the smaller of the two. Another assumption could have been to sum them (I didn't move forward with this). I ultimately threw a distinct call into the count of the ensuing select statement that also featured the filtering logic.
+I approached the problem with 3 CTEs. The first ranks the measurements within each day. The second refers to the first and sums the measurement for all odd rankings. The third also refers to the first and sums the measurement for all even rankings. Finally, a select statement with multiple joins from the CTE outputs achieve the requisite format for the solution. I'm very happy with it. It's a little lengthy but I think it breaks down the problem nicely and can be simple to follow.
 
-The official solution used the last assumption as well.
+The official solution uses the same process but simplifies things by avoiding the last two CTEs and multiple joins. Instead, they implemented two case statements wrapped in sum functions to get the requisite values. Slick, I like it!
 
-[Full Challenge Description](https://datalemur.com/questions/sql-first-transaction)
+[Full Challenge Description](https://datalemur.com/questions/odd-even-measurements)

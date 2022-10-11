@@ -1,15 +1,19 @@
-# Tweets' Rolling Averages
+# User's Third Transaction
 
-Data Lemur SQL challenge to calculate rolling tweet averages.
+Data Lemur SQL challenge to find over-/underpaid employees at Accenture.
 
 ## Problem
 
-The table below contains information about tweets over a given period of time. Calculate the 3-day rolling average of tweets published by each user for each date that a tweet was posted. Output the user id, tweet date, and rolling averages rounded to 2 decimal places.
+An employee is considered to be potentially overpaid if they earn more than 2 times the average salary for people with the same title. Similarly, an employee might be underpaid if they earn less than half of the average for their title. We'll refer to employees who are both underpaid and overpaid as compensation outliers for the purposes of this problem.
+
+Write a query that shows the following data for each compensation outlier: employee ID, salary, and whether they are potentially overpaid or potentially underpaid.
 
 ## Solution
 
-This exercise was very difficult because I only had superficial knowledge of window functions at the time and hadn't worked with defining the rows the frame applies to. I used a series of subqueries and transformed columns to achieve the number of tweets and the corresponding number of days. But I still ended up using window functions. I designed a successful solution but it was very messy.
+My only approach felt clunky by the end but I'm really trying to make use of CTEs. I started with a CTE that computed the salary averages by title. That CTE was referenced in a subquery with over-/underpaid logic. Outside of the subquery I filtered out non-outlier employee salaries.
 
-The official solution taught me that the simple way to solve this is a window function where we define the rows preceding that it applies to. This made my second solution very readable and compact compared to the first approach. Also using a CTE made it easier to understand as well. Definitely learned a lot!
+Another avenue for solving this problem could have been using a second subquery but I believe that would've introduced a third level of nested queries and the use of a CTE felt more readable and practical.
 
-[Full Challenge Description](https://datalemur.com/questions/rolling-average-tweets)
+The official solution was quite brilliant, actually. They also implemented a CTE but used a window function (need to practice those) to create the over-/underpaid thresholds. Then a "where" statement could filter out the the non-outlier employee salaries. The window function replaced the subquery I used. Neat!
+
+[Full Challenge Description](https://datalemur.com/questions/compensation-outliers)

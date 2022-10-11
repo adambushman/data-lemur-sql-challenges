@@ -1,5 +1,5 @@
 /*
-*** Challenge 25 - Medium
+*** Challenge 27 - Medium
 *** First Transaction - Etsy
 *** Official Submission - Adam Bushman
 */

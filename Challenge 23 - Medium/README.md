@@ -1,17 +1,15 @@
-# Odd and Even Measurements
+# Sending vs Opening Snaps
 
-Data Lemur SQL challenge to sum odd and even numbers in separate columns.
+Data Lemur SQL challenge to compare behavior with snaps by age group.
 
 ## Problem
 
-Assume you are given the table below containing measurement values obtained from a sensor over several days. Measurements are taken several times within a given day.
+Assume you are given the tables below containing information on Snapchat users, their ages, and their time spent sending and opening snaps. Write a query to obtain a breakdown of the time spent sending vs. opening snaps (as a percentage of total time spent on these activities) for each of the different age groups.
 
-Write a query to obtain the sum of the odd-numbered and even-numbered measurements on a particular day, in two different columns.
+Output the age bucket and percentage of sending and opening snaps. Round the percentages to 2 decimal places.
 
 ## Solution
 
-I approached the problem with 3 CTEs. The first ranks the measurements within each day. The second refers to the first and sums the measurement for all odd rankings. The third also refers to the first and sums the measurement for all even rankings. Finally, a select statement with multiple joins from the CTE outputs achieve the requisite format for the solution. I'm very happy with it. It's a little lengthy but I think it breaks down the problem nicely and can be simple to follow.
+My solution was to implement a subquery to handle the logic for grouping the time by send, open, and total. The outer query handles the presentation via formatting, scale, and calculation. Another modification was to avoid totalling the time in the subquery and execute that in the outer query. I think I like that better, in hindsight.
 
-The official solution uses the same process but simplifies things by avoiding the last two CTEs and multiple joins. Instead, they implemented two case statements wrapped in sum functions to get the requisite values. Slick, I like it!
-
-[Full Challenge Description](https://datalemur.com/questions/odd-even-measurements)
+[Full Challenge Description](https://datalemur.com/questions/time-spent-snaps)

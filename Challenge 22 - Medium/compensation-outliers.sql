@@ -1,5 +1,5 @@
 /*
-*** Challenge 20 - Medium
+*** Challenge 22 - Medium
 *** Compensation Outliers - Accenture
 *** Official Submission - Adam Bushman
 */

@@ -1,5 +1,5 @@
 /*
-*** Challenge 24 - Medium
+*** Challenge 26 - Medium
 *** Highest-Crossing Items - Amazon
 *** Official Submission - Adam Bushman
 */

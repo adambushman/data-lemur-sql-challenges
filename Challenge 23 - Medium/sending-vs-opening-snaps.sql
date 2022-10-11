@@ -1,5 +1,5 @@
 /*
-*** Challenge 21 - Medium
+*** Challenge 23 - Medium
 *** Sending vs Opening Snaps - Snapchat
 *** Official Submission - Adam Bushman
 */

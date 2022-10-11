@@ -1,5 +1,5 @@
 /*
-*** Challenge 22 - Medium
+*** Challenge 24 - Medium
 *** Tweets' Rolling Averages - Twitter
 *** Official Submission - Adam Bushman
 */

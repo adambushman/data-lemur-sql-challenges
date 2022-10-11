@@ -1,15 +1,17 @@
-# Sending vs Opening Snaps
+# User's Third Transaction
 
-Data Lemur SQL challenge to compare behavior with snaps by age group.
+Data Lemur SQL challenge to find the third transaction for every Uber user.
 
 ## Problem
 
-Assume you are given the tables below containing information on Snapchat users, their ages, and their time spent sending and opening snaps. Write a query to obtain a breakdown of the time spent sending vs. opening snaps (as a percentage of total time spent on these activities) for each of the different age groups.
-
-Output the age bucket and percentage of sending and opening snaps. Round the percentages to 2 decimal places.
+Assume you are given the table below on Uber transactions made by users. Write a query to obtain the third transaction of every user. Output the user id, spend and transaction date.
 
 ## Solution
 
-My solution was to implement a subquery to handle the logic for grouping the time by send, open, and total. The outer query handles the presentation via formatting, scale, and calculation. Another modification was to avoid totalling the time in the subquery and execute that in the outer query. I think I like that better, in hindsight.
+My only approach centered around use of the RANK() window function. I had to remind myself of the syntax but was able to add a column presenting the rank partitioned by the user id and ordered by the transaction date. 
 
-[Full Challenge Description](https://datalemur.com/questions/time-spent-snaps)
+I then needed to use either a CTE or a subquery in order to filter off the window function result. I tested both approaches and each worked just fine. I think I may prefer the CTE a little more.
+
+The official solution uses my exact approach and demonstrates a subquery and CTE approach. They highlight how a CTE can be used multiple times in that query session and is more readable.
+
+[Full Challenge Description](https://datalemur.com/questions/sql-third-transaction)

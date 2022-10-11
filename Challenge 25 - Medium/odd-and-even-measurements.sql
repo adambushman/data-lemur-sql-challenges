@@ -1,5 +1,5 @@
 /*
-*** Challenge 23 - Medium
+*** Challenge 25 - Medium
 *** Odd and Even Measurements - Google
 *** Official Submission - Adam Bushman
 */
