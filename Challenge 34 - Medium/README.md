@@ -1,6 +1,6 @@
 # User Session Activity
 
-Data Lemur SQL challenge to tally song plays up to a certain day in the week.
+Data Lemur SQL challenge to rank session duration totals by type.
 
 ## Problem
 
