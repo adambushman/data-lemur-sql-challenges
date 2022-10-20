@@ -1,5 +1,5 @@
 /*
-*** Challenge 41 - Hard
+*** Challenge 41 - Medium
 *** Active User Retention - Facebook
 *** Official Submission - Adam Bushman
 */
