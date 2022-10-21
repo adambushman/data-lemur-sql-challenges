@@ -18,6 +18,8 @@ I've created a folder for each challenge, labeled in the order they appear on Da
 
 ## Links
 
+[Portfolio Project Post](https://adam-bushman.com/project_posts/proj_sql-challenges_008.html)
+
 [Data Lemur](https://datalemur.com/)
 
 [Nick Singh LinkedIn](https://www.linkedin.com/in/nick-singh-tech/)
