@@ -1,5 +1,5 @@
 /*
-*** Challenge 46 - Hard
+*** Challenge 47 - Hard
 *** Reactivated Users - Facebook
 *** Official Submission - Adam Bushman
 */
