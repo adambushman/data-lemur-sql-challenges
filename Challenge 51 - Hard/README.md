@@ -1,6 +1,6 @@
 # Advertiser status
 
-Data Lemur SQL challenge to find prime/non-prime items to store in a warehouse.
+Data Lemur SQL challenge to change advertiser statuses based on payment updates or lack thereof.
 
 ## Problem
 
