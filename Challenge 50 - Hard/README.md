@@ -1,6 +1,6 @@
-# Prime Warehouse Storage
+# Median Search Frequency
 
-Data Lemur SQL challenge to find prime/non-prime items to store in a warehouse.
+Data Lemur SQL challenge to find the median of pre-aggregated values.
 
 ## Problem
 
