@@ -25,8 +25,6 @@ I was able to practice novice to advanced techniques, specifically developing gr
 
 I am so impressed with how the structure of my queries improved to enhance readability and efficiency. I feel far more equipped with the available techniques and features of SQL to solve data transformation and extraction problems.
 
-![Data Lemur Logo Graphic](./proj_header_008.jpg)
-
 ## Links
 
 [Portfolio Project Post](https://adam-bushman.com/project_posts/proj_sql-challenges_008.html)
